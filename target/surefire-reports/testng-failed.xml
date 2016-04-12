@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="com.muks.testng.TestApp"/>
+      <class name="com.muks.testng.TestRegressions"/>
+    </classes>
+  </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.muks.testng.TestApp">
+        <methods>
+          <include name="testSampleThree"/>
+          <include name="beforeEveryTests"/>
+          <include name="oneTimeSetUp"/>
+          <include name="afterEveryTests"/>
+          <include name="oneTimeTearDown"/>
+        </methods>
+      </class> <!-- com.muks.testng.TestApp -->
+      <class name="com.muks.testng.TestRegressions">
+        <methods>
+          <include name="oneTimeTearDown"/>
+          <include name="oneTimeSetUp"/>
+        </methods>
+      </class> <!-- com.muks.testng.TestRegressions -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
