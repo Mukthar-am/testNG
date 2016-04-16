@@ -8,64 +8,25 @@ import org.testng.annotations.Test;
  */
 public class GroupTestExample {
 
-    String message = ".com";
-    MessageUtil messageUtil = new MessageUtil(message);
-
-    @Test(groups = {"functest", "checkintest"})
-
-    public void testPrintMessage() {
-        System.out.println("Inside testPrintMessage()");
-        message = ".com";
-        Assert.assertEquals(message, messageUtil.printMessage());
+    @Test(groups={"method1"})
+    public void testingMethod1() {
+        System.out.println("Method - testingMethod1()");
     }
 
-    @Test(groups = {"checkintest"})
-
-    public void testSalutationMessage() {
-        System.out.println("Inside testSalutationMessage()");
-        message = "tutorialspoint" + ".com";
-        Assert.assertEquals(message, messageUtil.salutationMessage());
+    @Test(groups="method2")
+    public void testingMethod2() {
+        System.out.println("Method - testingMethod2()");
     }
 
-    @Test(groups = {"functest"})
+    @Test(groups="method1")
+    public void testingMethod3() {
+        System.out.println("Method - testingMethod1_1()");
+    }
 
-    public void testingExitMessage() {
-        System.out.println("Inside testExitMessage()");
-        message = "www." + "tutorialspoint" + ".com";
-        Assert.assertEquals(message, messageUtil.exitMessage());
+    @Test(groups={"integration"})
+    public void testingMethod4() {
+        System.out.println("Method - testingMethod4()");
     }
 
 
-    /*
-    * This class prints the given message on console.
-    */
-    class MessageUtil {
-        private String message;
-
-        // Constructor
-        // @param message to be printed
-        public MessageUtil(String message) {
-            this.message = message;
-        }
-
-        // prints the message
-        public String printMessage() {
-            System.out.println(message);
-            return message;
-        }
-
-        // add "tutorialspoint" to the message
-        public String salutationMessage() {
-            message = "tutorialspoint" + message;
-            System.out.println(message);
-            return message;
-        }
-
-        // add "www." to the message
-        public String exitMessage() {
-            message = "www." + message;
-            System.out.println(message);
-            return message;
-        }
-    }
 }
