@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="MyTestSuite">
+
+    <test name="IntegrationGroup">
+
+        <parameter name="name" value="muks"/>
+        <parameter name="number" value="2"/>
+
+        <parameter name="dbconfig" value="db.properties" />
+        <parameter name="poolsize" value="10" />
+
+        <!-- If groups are enabled to run, only tests corresponding to that groups get executed -->
+        <groups>
+            <run>
+                <include name="selenium-tests" />
+            </run>
+        </groups>
+
+
+        <classes>
+            <class name="com.muks.testng.GroupTestExample" />
+            <class name="com.muks.testng.ParamUsingDataProvider"/>
+            <class name="com.muks.testng.ParamUsingTestingxml" />
+        </classes>
+    </test>
+
+</suite>

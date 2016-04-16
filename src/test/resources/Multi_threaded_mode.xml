@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+<suite name="Independent test Suite" >
+    <test name="Independent test">
+        <classes>
+            <class name="com.muks.testng.multi_threaded_tests.MultiThreadedMethodRuns" />
+        </classes>
+    </test>
+</suite>

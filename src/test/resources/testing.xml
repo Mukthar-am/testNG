@@ -1,27 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 
-<suite name="MyTestSuite">
+<!--<suite name="Multi-Threaded Suite" parallel="methods" thread-count="4" >-->
 
-    <test name="IntegrationGroup">
+<!--<suite name="Multi-Threaded Suite" parallel="classes" thread-count="4" >-->
 
-        <parameter name="name" value="muks"/>
-        <parameter name="number" value="2"/>
+<suite name="Test-class Suite" parallel="tests" thread-count="2">
 
-        <parameter name="dbconfig" value="db.properties" />
-        <parameter name="poolsize" value="10" />
-
-        <!-- If groups are enabled to run, only tests corresponding to that groups get executed -->
-        <groups>
-            <run>
-                <include name="selenium-tests" />
-            </run>
-        </groups>
-
-
+    <test name="Parallel Test Mode" group-by-instances="true">
         <classes>
-            <class name="com.muks.testng.GroupTestExample" />
-            <class name="com.muks.testng.ParamUsingDataProvider"/>
-            <class name="com.muks.testng.ParamUsingTestingxml" />
+            <class name="com.muks.testng.multi_threaded_tests.MultiThreadedMethodRuns" />
+            <!--<class name="com.muks.testng.multi_threaded_tests.MultiClasses1" />-->
+            <!--<class name="com.muks.testng.multi_threaded_tests.MultiClasses2" />-->
+            <!--<class name="com.muks.testng.multi_threaded_tests.MultiThreadedTestRuns" />-->
         </classes>
     </test>
 

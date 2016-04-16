@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+
+
+<!-- Parallel test methods -->
+<!--<suite name="Multi-Threaded Suite" parallel="methods" thread-count="2" >-->
+
+<!-- Parallel test classes -->
+<!--<suite name="Multi-Threaded Suite" parallel="tests" thread-count="2" >-->
+
+<suite name="Multi-Threaded Suite" parallel="methods" thread-count="2" >
+    <test name="Parallel Test Mode" group-by-instances="true">
+        <classes>
+            <class name="com.muks.testng.multi_threaded_tests.MultiThreadedTestRuns" />
+        </classes>
+    </test>
+</suite>
+
+
+
+<!-- Eg for multi threaded, running parallel test-suite -->
+
+<!--<suite name="Test-class Suite" parallel="tests" thread-count="2">-->
+<!--<test name="Test-class test 1">-->
+    <!--<parameter name="test-name" value="test-method One" />-->
+    <!--<classes>-->
+        <!--<class name="com.muks.testng.multi_threaded_tests.MultiThreadedTestRuns" />-->
+    <!--</classes>-->
+<!--</test>-->
+<!--<test name="Test-class test 2">-->
+    <!--<parameter name="test-name" value="test-method One" />-->
+    <!--<classes>-->
+        <!--<class name="com.muks.testng.multi_threaded_tests.MultiThreadedTestRuns" />-->
+    <!--</classes>-->
+<!--</test>-->
+<!--</suite>-->
