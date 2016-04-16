@@ -6,7 +6,7 @@
         <parameter name="number" value="2"/>
 
         <classes>
-            <class name="com.muks.testng.ParameterizedTests"/>
+            <class name="com.muks.testng.ParamUsingDataProvider"/>
             <class name="com.muks.testng.TestApp"/>
         </classes>
 

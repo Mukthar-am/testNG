@@ -8,7 +8,7 @@ import java.io.*;
 /**
  * Created by mukthar.ahmed on 4/16/16.
  */
-public class ParameterizeByXml {
+public class ParamUsingTestingxml {
 
     @Test
     @Parameters(value="number")
@@ -25,7 +25,7 @@ public class ParameterizeByXml {
         System.out.println("poolsize : " + poolsize);
 
 
-        String file = ParameterizeByXml.class.getClassLoader().getResource(dbconfig).getFile();
+        String file = ParamUsingTestingxml.class.getClassLoader().getResource(dbconfig).getFile();
         System.out.println("# File = "+ file);
 
         try {

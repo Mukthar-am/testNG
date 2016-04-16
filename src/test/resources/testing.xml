@@ -17,8 +17,8 @@
         <!--</groups>-->
         <classes>
             <class name="com.muks.testng.GroupTestExample" />
-            <class name="com.muks.testng.ParameterizedTests"/>
-            <class name="com.muks.testng.ParameterizeByXml" />
+            <class name="com.muks.testng.ParamUsingDataProvider"/>
+            <class name="com.muks.testng.ParamUsingTestingxml" />
         </classes>
     </test>
 

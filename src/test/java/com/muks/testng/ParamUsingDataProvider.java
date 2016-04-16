@@ -5,12 +5,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.util.Vector;
-
 /**
  * Created by mukthar.ahmed on 4/16/16.
  */
-public class ParameterizedTests {
+public class ParamUsingDataProvider {
 
 
     @DataProvider(name = "MyDataProvider")
@@ -29,10 +27,10 @@ public class ParameterizedTests {
     public void testPrimeNumberChecker(Integer inputNumber, Boolean expectedResult) {
         System.out.println("# InputNumber = " + inputNumber + ", Expected = " + expectedResult);
 
-        ParameterizedTests parameterizedTests = new ParameterizedTests();
+        ParamUsingDataProvider paramUsingDataProvider = new ParamUsingDataProvider();
 
         Assert.assertEquals(expectedResult,
-            parameterizedTests.primeNumberChecker(inputNumber));
+            paramUsingDataProvider.primeNumberChecker(inputNumber));
     }
 
 
