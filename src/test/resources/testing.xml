@@ -10,11 +10,14 @@
         <parameter name="dbconfig" value="db.properties" />
         <parameter name="poolsize" value="10" />
 
-        <!--<groups>-->
-            <!--<run>-->
-                <!--<include name="method1"/>-->
-            <!--</run>-->
-        <!--</groups>-->
+        <!-- If groups are enabled to run, only tests corresponding to that groups get executed -->
+        <groups>
+            <run>
+                <include name="selenium-tests" />
+            </run>
+        </groups>
+
+
         <classes>
             <class name="com.muks.testng.GroupTestExample" />
             <class name="com.muks.testng.ParamUsingDataProvider"/>

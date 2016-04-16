@@ -5,11 +5,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-/**
- * Created by mukthar.ahmed on 4/16/16.
- */
-public class ParamUsingDataProvider {
 
+public class ParamUsingDataProvider {
 
     @DataProvider(name = "MyDataProvider")
     public static Object[][] primeNumbers() {
@@ -23,7 +20,8 @@ public class ParamUsingDataProvider {
     }
 
 
-    @Test(dataProvider = "MyDataProvider")
+
+    @Test(dataProvider = "MyDataProvider", groups = {"selenium-tests"})
     public void testPrimeNumberChecker(Integer inputNumber, Boolean expectedResult) {
         System.out.println("# InputNumber = " + inputNumber + ", Expected = " + expectedResult);
 

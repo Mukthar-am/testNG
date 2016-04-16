@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 /**
  * Created by mukthar.ahmed on 4/16/16.
  */
+
+@Test(groups= "selenium-tests")
 public class GroupTestExample {
 
     @Test(groups={"method1"})
